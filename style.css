@@ -1,0 +1,194 @@
+@import url("https://fonts.googleapis.com/css2?family=Finlandica:ital,wght@0,400;0,500;1,400;1,500&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Finlandica", sans-serif;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+header {
+  background-color: #d1453b;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.4rem;
+  height: 60px;
+}
+header img {
+  height: 50px;
+  vertical-align: middle;
+  border-color: #fff;
+  border-style: solid;
+  border-radius: 50%;
+  border-width: 2px;
+}
+header span {
+  font-size: 30px;
+  color: #fff;
+  cursor: pointer;
+  position: relative;
+  display: none;
+}
+@media (max-width: 768px) {
+  header span {
+    display: block;
+  }
+}
+header ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0 20px;
+}
+header ul li {
+  padding: 0 20px;
+  color: #fff;
+}
+@media (max-width: 768px) {
+  header ul {
+    position: absolute;
+    flex-direction: column;
+    right: 0;
+    top: 60px;
+    background-color: #d1453b;
+    text-align: center;
+    display: none;
+  }
+  header ul li {
+    line-height: 3;
+  }
+}
+
+.boxes {
+  margin-top: 50px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
+  gap: 20px;
+}
+.boxes .box {
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  padding: 20px 40px;
+  background-color: rgba(209, 69, 59, 0.8470588235);
+  color: #fff;
+  border-radius: 10px;
+}
+.boxes .box .form-check {
+  margin-top: 20px;
+}
+.boxes .box .form-check label {
+  font-size: 1.2rem;
+  padding-left: 5px;
+  cursor: pointer;
+}
+
+.form-check-input {
+  background-color: #fff;
+  cursor: pointer;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.form-check-input:checked {
+  background-color: #fd0d0d;
+  border-color: rgba(253, 13, 13, 0.7529411765);
+}
+
+#home {
+  -webkit-clip-path: url(#cache);
+          clip-path: url(#cache);
+}
+
+#home-anim {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+#red {
+  fill: none;
+  opacity: 0.15;
+  stroke: #CE1B5F;
+  stroke-width: 12;
+  stroke-miterlimit: 10;
+  -webkit-animation: show 4s;
+          animation: show 4s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+}
+
+#blue {
+  fill: none;
+  opacity: 0.15;
+  stroke: #06A1C4;
+  stroke-width: 12;
+  stroke-miterlimit: 10;
+  -webkit-animation: show 4s;
+          animation: show 4s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+}
+
+#light-blue {
+  fill: none;
+  opacity: 0.15;
+  stroke: #06A1C4;
+  stroke-width: 6;
+  stroke-miterlimit: 10;
+  stroke-dasharray: 200;
+  stroke-dashoffset: 800;
+  -webkit-animation: draw 4s;
+          animation: draw 4s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+}
+
+@-webkit-keyframes draw {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes draw {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+@-webkit-keyframes show {
+  0% {
+    opacity: 0.15;
+  }
+  50% {
+    opacity: 0.2;
+  }
+  100% {
+    opacity: 0.15;
+  }
+}
+@keyframes show {
+  0% {
+    opacity: 0.15;
+  }
+  50% {
+    opacity: 0.2;
+  }
+  100% {
+    opacity: 0.15;
+  }
+}/*# sourceMappingURL=style.css.map */

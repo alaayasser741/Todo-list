@@ -1,0 +1,201 @@
+@import "_var.scss";
+@import url('https://fonts.googleapis.com/css2?family=Finlandica:ital,wght@0,400;0,500;1,400;1,500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Finlandica', sans-serif;
+    user-select: none;
+}
+
+header {
+    background-color: $bg-color;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.4rem;
+    height: 60px;
+
+    img {
+        height: 50px;
+        vertical-align: middle;
+
+        border: {
+            color: $text-color;
+            style: solid;
+            radius: 50%;
+            width: 2px;
+        }
+
+    }
+
+    span {
+        font-size: 30px;
+        color: $text-color;
+        cursor: pointer;
+        position: relative;
+        display: none;
+
+        @media (max-width:768px) {
+            display: block;
+        }
+
+    }
+
+    ul {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+        padding: 0 20px;
+
+        li {
+            padding: 0 20px;
+            color: $text-color;
+        }
+
+        @media (max-width:768px) {
+            position: absolute;
+            // display: none;
+            flex-direction: column;
+            right: 0;
+            top: 60px;
+            background-color: $bg-color;
+            text-align: center;
+            display: none;
+
+            li {
+                line-height: 3;
+            }
+        }
+    }
+}
+
+// /////////////////////////////////////////////////////////
+.boxes {
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
+    gap: 20px;
+
+    .box {
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        padding: 20px 40px;
+        background-color: $card-color;
+        color: $text-color;
+        border-radius: 10px;
+
+        //@for$ifrom0to5:;
+        //:;
+        .form-check {
+            // border: 1px solid #fff;
+            margin-top: 20px;
+
+            label {
+                font-size: 1.2rem;
+                padding-left: 5px;
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+
+.form-check-input {
+    background-color: #fff;
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+}
+
+.form-check-input:checked {
+    background-color: #fd0d0d;
+    border-color: #fd0d0dc0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#home {
+    clip-path: url(#cache);
+}
+#home-anim{
+    position: absolute; 
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+#red {
+    fill: none;
+    opacity: 0.15;
+    stroke: #CE1B5F;
+    stroke-width: 12;
+    stroke-miterlimit: 10;
+    animation: show 4s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+#blue {
+    fill: none;
+    opacity: 0.15;
+    stroke: #06A1C4;
+    stroke-width: 12;
+    stroke-miterlimit: 10;
+    animation: show 4s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+#light-blue {
+    fill: none;
+    opacity: 0.15;
+    stroke: #06A1C4;
+    stroke-width: 6;
+    stroke-miterlimit: 10;
+    stroke-dasharray: 200;
+    stroke-dashoffset: 800;
+    animation: draw 4s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes draw {
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+@keyframes show {
+    0% {
+        opacity: 0.15;
+    }
+
+    50% {
+        opacity: 0.2;
+    }
+
+    100% {
+        opacity: 0.15;
+    }
+}
