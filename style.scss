@@ -16,6 +16,17 @@ header {
     padding: 1rem 1.4rem;
     height: 60px;
 
+    i {
+        cursor: pointer;
+        color: #ccc;
+
+        &:hover {
+            transition: 0.3s;
+            transform: scale(1.5);
+            color: #fff;
+        }
+    }
+
     img {
         height: 50px;
         vertical-align: middle;
@@ -86,8 +97,10 @@ header {
         color: $text-color;
         border-radius: 10px;
 
-        //@for$ifrom0to5:;
-        //:;
+        h2 {
+            text-transform: capitalize;
+        }
+
         .form-check {
             // border: 1px solid #fff;
             margin-top: 20px;
@@ -136,12 +149,16 @@ header {
 #home {
     clip-path: url(#cache);
 }
-#home-anim{
-    position: absolute; 
+
+#home-anim {
+    // position: absolute; 
     top: 0;
     left: 0;
     z-index: -1;
+    height: 100%;
+    position: fixed;
 }
+
 #red {
     fill: none;
     opacity: 0.15;

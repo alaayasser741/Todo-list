@@ -17,6 +17,15 @@ header {
   padding: 1rem 1.4rem;
   height: 60px;
 }
+header i {
+  cursor: pointer;
+  color: #ccc;
+}
+header i:hover {
+  transition: 0.3s;
+  transform: scale(1.5);
+  color: #fff;
+}
 header img {
   height: 50px;
   vertical-align: middle;
@@ -77,6 +86,9 @@ header ul li {
   color: #fff;
   border-radius: 10px;
 }
+.boxes .box h2 {
+  text-transform: capitalize;
+}
 .boxes .box .form-check {
   margin-top: 20px;
 }
@@ -103,10 +115,11 @@ header ul li {
 }
 
 #home-anim {
-  position: absolute;
   top: 0;
   left: 0;
   z-index: -1;
+  height: 100%;
+  position: fixed;
 }
 
 #red {
